@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-HELLO
-=======
-This is a relevant fact
->>>>>>> merge-conflict-branch1
+Hii
