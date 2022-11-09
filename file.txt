@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-This is an indispensable truth!
-=======
-This is a relevant fact
->>>>>>> merge-conflict-branch1
-=======
-This is a relevant fact
->>>>>>> merge-conflict-branch1
+HELLO
