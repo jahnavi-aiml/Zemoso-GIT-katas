@@ -1,0 +1,241 @@
+BASIC COMMITS
+
+$ git clone https://github.com/eficode-academy/git-katas/blob/master/Overview.md#basic-git-katas-in-suggested-order .
+Cloning into '.'...
+fatal: https://github.com/eficode-academy/git-katas/blob/master/Overview.md#basic-git-katas-in-suggested-order/info/refs not valid: is this a git repository?
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy (master)
+$ git clone https://github.com/jahnavi-aiml/Zemoso-GIT-katas .
+Cloning into '.'...
+warning: You appear to have cloned an empty repository.
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy (main)
+$ source setup.sh
+bash: setup.sh: No such file or directory
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy (main)
+$ cd ..
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop (master)
+$ mkdir dummy2
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop (master)
+$ cd dummy2
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2 (master)
+$ git clone https://github.com/eficode-academy/git-katas .
+Cloning into '.'...
+remote: Enumerating objects: 2433, done.
+remote: Counting objects: 100% (1102/1102), done.
+remote: Compressing objects: 100% (463/463), done.
+remote: Total 2433 (delta 697), reused 663 (delta 639), pack-reused 1331
+Receiving objects: 100% (2433/2433), 2.46 MiB | 6.20 MiB/s, done.
+Resolving deltas: 100% (1045/1045), done.
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2 (master)
+$ source setup.sh
+bash: setup.sh: No such file or directory
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2 (master)
+$ cd bsic-commits
+bash: cd: bsic-commits: No such file or directory
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2 (master)
+$ cd tree
+bash: cd: tree: No such file or directory
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2 (master)
+$ cd basic-commits
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits (master)
+$ source setup.sh
+Initialized empty Git repository in C:/Users/JahnaviP/Desktop/dummy2/basic-commits/exercise/.git/
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git branch basiccommits
+fatal: not a valid object name: 'master'
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git checkout basic-commits
+error: pathspec 'basic-commits' did not match any file(s) known to git
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git branches
+git: 'branches' is not a git command. See 'git --help'.
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git branch
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ touch file.txt
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git add file.txt
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git branch file
+fatal: not a valid object name: 'master'
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git commit -m file.txt
+[master (root-commit) 8f58b45] file.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git log
+commit 8f58b45802a6580c5193dfd78b8d1df3960848c7 (HEAD -> master)
+Author: Jahnavi Peddineni <jahnavi.peddineni@zemosolabs.com>
+Date:   Wed Nov 9 11:35:10 2022 +0530
+
+    file.txt
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git branch basic
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (master)
+$ git switch basic
+Switched to branch 'basic'
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git status
+On branch basic
+nothing to commit, working tree clean
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git add .
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git status
+On branch basic
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git commit -m "Modified text"
+[basic 5ea605e] Modified text
+ 1 file changed, 1 insertion(+)
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git log
+commit 5ea605e239016aab82d7f37968071d9e0d1cdfa5 (HEAD -> basic)
+Author: Jahnavi Peddineni <jahnavi.peddineni@zemosolabs.com>
+Date:   Wed Nov 9 11:38:22 2022 +0530
+
+    Modified text
+
+commit 8f58b45802a6580c5193dfd78b8d1df3960848c7 (master)
+Author: Jahnavi Peddineni <jahnavi.peddineni@zemosolabs.com>
+Date:   Wed Nov 9 11:35:10 2022 +0530
+
+    file.txt
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git branch -a
+* basic
+  master
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git status
+On branch basic
+nothing to commit, working tree clean
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ echo "How are you?" > file.txt
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git status
+On branch basic
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next timtouches it
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git status
+On branch basic
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git commit -m "File edited"
+[basic e41a15d] File edited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git log
+commit e41a15de7aecc140283ecc149d157536e6dadf81 (HEAD -> basic)
+Author: Jahnavi Peddineni <jahnavi.peddineni@zemosolabs.com>
+Date:   Wed Nov 9 12:07:31 2022 +0530
+
+    File edited
+
+commit 5ea605e239016aab82d7f37968071d9e0d1cdfa5
+Author: Jahnavi Peddineni <jahnavi.peddineni@zemosolabs.com>
+Date:   Wed Nov 9 11:38:22 2022 +0530
+
+    Modified text
+
+commit 8f58b45802a6580c5193dfd78b8d1df3960848c7 (master)
+Author: Jahnavi Peddineni <jahnavi.peddineni@zemosolabs.com>
+Date:   Wed Nov 9 11:35:10 2022 +0530
+
+    file.txt
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git remote add origin https://github.com/jahnavi-aiml/Zemoso-GIT-katas.git
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git branch -M basic
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ git push -u origin basic
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (9/9), 654 bytes | 654.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/jahnavi-aiml/Zemoso-GIT-katas.git
+ * [new branch]      basic -> basic
+branch 'basic' set up to track 'origin/basic'.
+
+JahnaviP@LAPTOP-S6BL64S9 MINGW64 ~/Desktop/dummy2/basic-commits/exercise (basic)
+$ cd ..
+
