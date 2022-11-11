@@ -1,0 +1,93 @@
+This is your command line, a safe place to practice & complete the scenario
+
+$ git rebase --interactive --root
+fatal: not a git repository (or any of the parent directories): .git
+$ git rebase --interactive --root
+[detached HEAD 6ec6fd4] Initial commit of the list
+ Date: Thu Nov 10 11:31:18 2022 +0000
+ 1 file changed, 5 insertions(+)
+ create mode 100644 list.html
+Successfully rebased and updated refs/heads/master.
+$ git log --oneline
+ESC[33mde2c0eaESC[mESC[33m (ESC[mESC[1;36mHEAD -> ESC[mESC[1;32mmasterESC[mESC[33m)ESC[m Final Item
+ESC[33m990d1d7ESC[m New Item
+ESC[33m6ec6fd4ESC[m Initial commit of the list
+$ git rebase --interactive HEAD~8
+fatal: Needed a single revision
+invalid upstream 'HEAD~8'
+$ git log --onelinegit rebase --interactive HEAD~8
+fatal: ambiguous argument 'rebase': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+$ git rebase --interactive HEAD~8
+[detached HEAD e507ebd] TODO
+ Date: Thu Nov 10 11:32:10 2022 +0000
+ 1 file changed, 6 insertions(+)
+Successfully rebased and updated refs/heads/master.
+$ git log --oneline
+ESC[33mdf068f2ESC[mESC[33m (ESC[mESC[1;36mHEAD -> ESC[mESC[1;32mmasterESC[mESC[33m)ESC[m Adding File 1
+ESC[33ma1c8626ESC[m Adding File 2
+ESC[33me507ebdESC[m TODO
+ESC[33mabb3647ESC[m TODO
+ESC[33m5d20088ESC[m TODO
+ESC[33mde2c0eaESC[m Final Item
+ESC[33m990d1d7ESC[m New Item
+ESC[33m6ec6fd4ESC[m Initial commit of the list
+$ git rebase --interactive HEAD~2
+Successfully rebased and updated refs/heads/master.
+$ git log --oneline
+ESC[33mce9c6d9ESC[mESC[33m (ESC[mESC[1;36mHEAD -> ESC[mESC[1;32mmasterESC[mESC[33m)ESC[m Adding File 2
+ESC[33m66dd1a5ESC[m Adding File 1
+ESC[33me507ebdESC[m TODO
+ESC[33mabb3647ESC[m TODO
+ESC[33m5d20088ESC[m TODO
+ESC[33mde2c0eaESC[m Final Item
+ESC[33m990d1d7ESC[m New Item
+ESC[33m6ec6fd4ESC[m Initial commit of the list
+$ git rebase --interactive HEAD~1
+error: update_ref failed for ref 'refs/heads/master': cannot lock ref 'refs/heads/master': is at 11e6daacbc95e8b7ddadbbff51a0ac1cf75f2e32 but expected ce9c6d9d877badd6fd0bd8ee9a386bb307a22208
+error: could not update refs/heads/master
+$ git rebase --interactive HEAD~1
+
+It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr "/home/scrapbook/tutorial/.git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+$ git rebase --abort
+$ git rebase --interactive HEAD~1
+Successfully rebased and updated refs/heads/master.
+$ git reset HEAD^
+$ git rebase --interactive HEAD~1
+Successfully rebased and updated refs/heads/master.
+$ git add file3.txt
+fatal: pathspec 'file3.txt' did not match any files
+$ ls
+file1.txt  file2.txt  list.html  TODO
+$ git add file1.txt
+$ git commit -m "File 1"
+On branch master
+Untracked files:
+        file2.txt
+
+nothing added to commit but untracked files present
+$ git add file2.txt
+$ git commit -m "File 2"
+[master 7a33af3] File 2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+$ git rebase --continue
+No rebase in progress?
+$ git log --oneline
+ESC[33m7a33af3ESC[mESC[33m (ESC[mESC[1;36mHEAD -> ESC[mESC[1;32mmasterESC[mESC[33m)ESC[m File 2
+ESC[33m66dd1a5ESC[m Adding File 1
+ESC[33me507ebdESC[m TODO
+ESC[33mabb3647ESC[m TODO
+ESC[33m5d20088ESC[m TODO
+ESC[33mde2c0eaESC[m Final Item
+ESC[33m990d1d7ESC[m New Item
+ESC[33m6ec6fd4ESC[m Initial commit of the list
+$ pick a1c8626 Adding File 2
